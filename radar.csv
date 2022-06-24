@@ -1,0 +1,11 @@
+name,ring,quadrant,isNew,description
+Part 1.1,Adopt,Techniques,TRUE,<p>Part 1.1 is about xxx.
+Part 1.2,Trial,Techniques,FALSE,<p>Part 1.2 is about xxx.
+Part 2.1,Adopt,Platforms,TRUE,<p>Part 2.1是用中文写的。
+Part 2.2,Trial,Platforms,FALSE,<p>Part 2.2是用中文写的。
+Part 3.1,Aceess,Tools,TRUE,<p>There is Part 3.1.
+Part 3.2,Hold,Tools,FALSE,<p>There is Part 3.2.
+Part 4.1,Aceess,languages-and-frameworks,TRUE,"<p>The first paragraph of Part 4.1.
+<p>The second paragraph of Part 4.1."
+Part 4.2,Hold,languages-and-frameworks,FALSE,"<p>The first paragraph of Part 4.2.
+<p>The second paragraph of Part 4.2."
