@@ -12,61 +12,62 @@
    * 可提供HTTP服务
       ![1-7](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/1-7.jpg?raw=true)
    * 拥有可远程访问的图形化界面
-      ![1-8](figure_deployment\1-8.png)
+      ![1-8](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/1-8.png?raw=true)
 2. 拉取Docker镜像：```docker pull wwwthoughtworks/build-your-own-radar```
-   ![1-1](figure_deployment\1-1.jpg)
+   ![1-1](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/1-1.jpg?raw=true)
 3. 获取Google客户端ID：
    * 进入```https://console.developers.google.com/apis/credentials```并登录
    * 创建凭据
-    ![1-2](figure_deployment\1-2.jpg)
+    ![1-2](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/1-2.jpg?raw=true)
    * 获得客户端ID
-    ![1-3](figure_deployment\1-3.jpg)
+    ![1-3](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/1-3.jpg?raw=true)
    **注意：** 测试发现不使用客户端ID也能启用服务。
 4. 启动容器以持续开放端口：```docker run --rm -p 8080:8080 -e CLIENT_ID="[Google Client ID]" wwwthoughtworks/build-your-own-radar```
-   ![1-10](figure_deployment\1-10.jpg)
+   ![1-10](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/1-10.jpg?raw=true)
    **注意：** 若要停止，可先通过```docker ps```查看运行的容器，再根据容器ID进行关闭。
-   ![1-6](figure_deployment\1-6.jpg)
+   ![1-6](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/1-6.jpg?raw=true)
 5. 进入浏览器：```http://localhost:8080```
-   ![1-9](figure_deployment\1-9.png)
+   ![1-9](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/1-9.png?raw=true)
    即可在服务端打开build-your-own-radar页面，输入符合要求的URL可生成雷达图。若要在本地打开，则在浏览器进入```http://[ServerIP]:8080```（**注意：** 如果本机与服务器不在一个内网内，则需要配置端口映射）。
 
 
 ## 服务端部署-本地源码版
 1. 下载官方源码：```git clone https://github.com/thoughtworks/build-your-own-radar.git```
-   ![6-1](figure_deployment\6-1.jpg)
+   ![6-1](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/6-1.jpg?raw=true)
 2. 进入文件夹：```cd build-your-own-radar/```
 3. 安装：```npm install```
-   ![6-5](figure_deployment\6-5.jpg)
+   ![6-5](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/6-5.jpg?raw=true)
 4. 运行：```npm run quality```
-   ![6-4](figure_deployment\6-4.jpg)
+   ![6-4](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/6-4.jpg?raw=true)
 5. 运行服务：```npm run dev```
-   ![6-2](figure_deployment\6-2.jpg)
-   ![6-3](figure_deployment\6-3.jpg)
+   ![6-2](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/6-2.jpg?raw=true)
+   ![6-3](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/6-3.jpg?raw=true)
 6. 进入浏览器：本机```http://localhost:8080```或者远程```http://10.9.231.163:8080/```
-   ![6-6](figure_deployment\6-6.jpg)
+   ![6-6](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/6-6.jpg?raw=true)
 
 ## Enflame-radar.csv文件维护
 1. （初始）进入Gitlab创建仓库：```http://git.enflame.cn/```
-   ![2-1](figure_deployment\2-1.jpg)
+   ![2-1](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/2-1.jpg?raw=true)
    已创建用于维护radar.csv的仓库：```http://git.enflame.cn/int.xiyue.shen/radar.git```
+   **注意：** Github类似，仓库地址为```https://github.com/shenxiyue/Enflame-Technology-Radar.git```。
 2. 添加本地SSH密钥：
    首先生成本地SSH密钥并获取：
-   ![2-4](figure_deployment\2-4.jpg)
+   ![2-4](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/2-4.jpg?raw=true)
    然后添加至Gitlab：
-   ![2-3](figure_deployment\2-3.jpg)
+   ![2-3](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/2-3.jpg?raw=true)
 3. 拉取仓库并进行后续开发：```git clone git@git.enflame.cn:int.xiyue.shen/radar.git```
-   ![2-5](figure_deployment\2-5.jpg)
+   ![2-5](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/2-5.jpg?raw=true)
    例如将在本地修改过的Enflame-radar.csv传至远程仓库：
-   ![2-6](figure_deployment\2-6.jpg)
+   ![2-6](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/2-6.jpg?raw=true)
 4. raw文件的URL获取：```http://git.enflame.cn/int.xiyue.shen/radar/raw/master/Enflame-radar.csv```
-   ![2-7](figure_deployment\2-7.jpg)
+   ![2-7](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/2-7.jpg?raw=true)
    
 
 ## Enflame Radar生成
 1. 在build-your-own-radar网页中输入URL并执行生成：
-   ![3-3](figure_deployment\3-3.png)
+   ![3-3](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/3-3.png?raw=true)
 2. 查看详细内容：
-   ![3-4](figure_deployment\3-4.png)
+   ![3-4](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/3-4.png?raw=true)
 
 
 ## Enflame-radar.csv文件监测
@@ -96,9 +97,9 @@
    ```
 2. 服务端持续运行radar_monitor.py：```python radar_monitor.py```
 3. 若监测到更新，自动打开网页：
-   ![1-5](figure_deployment\1-5.jpg)
+   ![1-5](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/1-5.jpg?raw=true)
 4. 输入URL生成雷达图并保持页面打开：
-   ![3-1](figure_deployment\3-1.jpg)
+   ![3-1](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/3-1.jpg?raw=true)
 
 ### 人工监测
 1. 用户修改Enflame-radar.csv文件，维护人员得到提示。
@@ -108,15 +109,15 @@
 
 ## 用户访问
 1. 用户访问```http://radar.enflame.cn:8080```可进入build-your-own-radar网页：
-   ![5-1](figure_deployment\5-1.jpg)
+   ![5-1](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/5-1.jpg?raw=true)
 2. 用户访问```http://radar.enflame.cn:8080/?sheetId=https%3A%2F%2Fraw.githubusercontent.com%2Fshenxiyue%2FEnflame-Technology-Radar%2Fmaster%2Fradar.csv```可查看当前的雷达图：
-   ![5-2](figure_deployment\5-2.jpg)
+   ![5-2](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/5-2.jpg?raw=true)
 
 
 # 问题
 目前在公司虚拟机上部署的服务只能识别并生成github链接的雷达图，google sheet、本机文件和gitlab都不行（连技术雷达官网也是只有github可以），也不生成图，也不报错，如下两图：
-![7-1](figure_deployment\7-1.jpg)
-![7-2](figure_deployment\7-2.jpg)
+![7-1](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/7-1.jpg?raw=true)
+![7-2](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/7-2.jpg?raw=true)
 |              | 虚拟机+docker镜像 | 虚拟机+本地源码 | 虚拟机+旧版源码 | 虚拟机+官网网页 | 服务器+docker镜像 | 本机+本地源码 | 本机+官网网页 |
 |:------------:|:----------------:|:--------------:|:--------------:|:--------------:|:----------------:|:------------:|:------------:|
 | Google sheet |         ×       |        ×        |         ×       |         ×       |         ×       |         ×       |        ✔       |
