@@ -10,7 +10,7 @@
    * 域名：radar.enflame.cn
    * 已联外网
    * 可提供HTTP服务
-      ![1-7](figure_deployment\1-7.jpg)
+      ![1-7](https://github.com/shenxiyue/Enflame-Technology-Radar/blob/master/figure_deployment/1-7.jpg?raw=true)
    * 拥有可远程访问的图形化界面
       ![1-8](figure_deployment\1-8.png)
 2. 拉取Docker镜像：```docker pull wwwthoughtworks/build-your-own-radar```
